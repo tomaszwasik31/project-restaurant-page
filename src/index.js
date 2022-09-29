@@ -1,19 +1,34 @@
+//import menuPage from "./menu";
+
 const homePage = (() => {
   const content = document.querySelector("#content");
   const home = document.querySelector("#home");
   const menu = document.querySelector("#menu");
   const contact = document.querySelector("#contact");
 
-  
   const cleanContent = () => {
-    content.innerHTML='';
+    content.innerHTML = "";
   };
-  home.addEventListener("click", cleanContent);
-  
+
+  const renderHomePage = () => {
+    cleanContent();
+    createHeading();
+    createArticle();
+    createQuote();
+  };
+
+  const renderMenuPage = () => {
+    cleanContent();
+    menuPage();
+  };
+  home.addEventListener("click", renderHomePage);
+  menu.addEventListener("click", renderMenuPage);
+  // contact.addEventListener("click", renderContactPage);
+
   const createHeading = () => {
-    div = document.createElement("div");
-    h1 = document.createElement("h1");
-    h2 = document.createElement("h2");
+    const div = document.createElement("div");
+    const h1 = document.createElement("h1");
+    const h2 = document.createElement("h2");
     h1.innerText = "Best pizza in Town!";
     h2.innerText = "Italian pizza";
     div.setAttribute("id", "headings-wrapper");
@@ -24,8 +39,8 @@ const homePage = (() => {
   };
 
   const createArticle = () => {
-    div = document.createElement("div");
-    p = document.createElement("p");
+    const div = document.createElement("div");
+    const p = document.createElement("p");
     div.setAttribute("id", "content-article");
     p.setAttribute("class", "txt");
 
@@ -36,9 +51,9 @@ const homePage = (() => {
   };
 
   const createQuote = () => {
-    div = document.createElement("div");
-    img = document.createElement("img");
-    p = document.createElement("p");
+    const div = document.createElement("div");
+    const img = document.createElement("img");
+    const p = document.createElement("p");
 
     div.setAttribute("id", "quote-wrapper");
     img.setAttribute("id", "chef");
