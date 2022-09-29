@@ -1,4 +1,4 @@
-// import menuPage from "./menu";
+import menuPage from "./menu";
 
 const homePage = (() => {
   const content = document.querySelector("#content");
