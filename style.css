@@ -97,9 +97,13 @@ aside {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 200;
 }
-.quote-wrapper {
+#quote-wrapper {
   padding-top: 2rem;
   display: flex;
   gap: 2rem;
   align-items: center;
+}
+
+.quote{
+  font-style: italic;
 }
