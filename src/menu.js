@@ -1,5 +1,5 @@
 const menuPage = () => {
-  console.log("change");
+  let number = 1;
 
   const createHeading = () => {
     const div = document.createElement("div");
@@ -16,27 +16,25 @@ const menuPage = () => {
       this.price = price;
     }
   }
-  const margarita = new Pizza("Margarita ", 10);
-  const cheesePizza = new Pizza("Cheese Pizza", 12);
-  const veggiePizza = new Pizza("Veggie Pizza ", 12);
-  const pepperoniPizza = new Pizza("Pepperoni Pizza ", 14);
-  const meatPizza = new Pizza("Meat Pizza ", 14);
 
-  let pizzaList = [
-    margarita,
-    cheesePizza,
-    veggiePizza,
-    pepperoniPizza,
-    meatPizza,
-  ];
+  const pizza1 = new Pizza("Margarita", 10);
+  const pizza2 = new Pizza("Cheese Pizza", 12);
+  const pizza3 = new Pizza("Veggie Pizza", 12);
+  const pizza4 = new Pizza("Pepperoni Pizza", 14);
+  const pizza5 = new Pizza("BBQ Chicken Pizza", 14);
+  const pizza6 = new Pizza("Hawaiian Pizza", 14);
+  const pizza7 = new Pizza(" Buffalo Pizza", 14);
+
+  let pizzaList = [pizza1, pizza2, pizza3, pizza4, pizza5, pizza6, pizza7];
 
   const createPizzaDiv = (pizza) => {
     const div = document.createElement("div");
     const p = document.createElement("p");
 
-    p.innerText = `${pizza.name} $${pizza.price}`;
+    p.innerText = `Nr.${number} ${pizza.name} $${pizza.price}`;
     content.appendChild(div);
     div.appendChild(p);
+    number++;
   };
   const renderPizzaList = () => {
     pizzaList.forEach((e) => {

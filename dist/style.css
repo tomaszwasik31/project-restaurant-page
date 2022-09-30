@@ -89,7 +89,6 @@ aside {
   gap: 1rem;
   background-color: var(--main);
   padding: 2rem;
-  
 }
 
 #content p {
@@ -104,6 +103,13 @@ aside {
   align-items: center;
 }
 
-.quote{
+.quote {
   font-style: italic;
 }
+
+#map, #restaurant {
+  height: 280px;
+  width: auto;
+}
+
+
